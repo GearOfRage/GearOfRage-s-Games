@@ -2,13 +2,13 @@ import React from "react";
 import "./SearchAndFilter.css";
 
 const SearchAndFilter = ({
-  searchTerm,
-  setSearchTerm,
   selectedTags,
   setSelectedTags,
   availableTags,
   sortBy,
   setSortBy,
+  searchTerm,
+  setSearchTerm,
 }) => {
   const handleTagToggle = (tag) => {
     setSelectedTags((prev) =>
@@ -24,23 +24,8 @@ const SearchAndFilter = ({
 
   return (
     <div className="search-filter-container">
-      <div className="search-bar-container">
-        <div className="search-input-wrapper">
-          <span className="search-icon">🔍</span>
-          <input
-            type="text"
-            placeholder="Search games..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="search-input"
-          />
-          {searchTerm && (
-            <button className="clear-search" onClick={() => setSearchTerm("")}>
-              ✕
-            </button>
-          )}
-        </div>
-
+      <div className="sort-section">
+        <label className="sort-label">Sort by:</label>
         <select
           value={sortBy}
           onChange={(e) => setSortBy(e.target.value)}

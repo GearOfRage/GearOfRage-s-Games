@@ -4,15 +4,16 @@ export const gamesData = [
     id: 1,
     title: "Venture Forth",
     description:
-      "An adventure game built with Unity and deployed as WebGL. Explore, discover, and venture forth into unknown territories in this immersive experience.",
-    tags: ["adventure", "unity", "webgl", "exploration"],
+      "A strategic match-3 puzzle game with RPG elements. Create chains of matching items to collect gold coins and shields while battling dangerous skulls. Features turn-based combat mechanics and resource management in a medieval fantasy setting.",
+    tags: ["puzzle", "match-3", "strategy", "rpg", "unity", "webgl"],
     screenshots: [
-      "https://via.placeholder.com/600x400/1a1a2e/eee?text=Venture+Forth+Screenshot",
-      "https://via.placeholder.com/600x400/16213e/eee?text=Venture+Forth+Gameplay",
+      "/assets/screenshots/venture-forth-1.png",
+      "/assets/screenshots/venture-forth-2.png",
+      "/assets/screenshots/venture-forth-3.png",
     ],
     deploymentUrl: "https://gearofrage.github.io/Venture-Forth/",
     githubUrl: "https://github.com/GearOfRage/Venture-Forth",
-    featured: true,
+    featured: false,
     technologies: ["Unity", "C#", "WebGL"],
     createdDate: "2024-01-15",
   },
@@ -23,13 +24,14 @@ export const gamesData = [
       "Web implementation of the Breach Protocol mini-game from Cyberpunk 2077. Features faithful reproduction of the original hacking mechanics with timer, buffer, and daemon sequences. Multiple difficulty levels with randomized code matrix.",
     tags: ["hacking", "cyberpunk", "mini-game", "unity", "webgl"],
     screenshots: [
-      "https://private-user-images.githubusercontent.com/83924241/478650267-59f1623a-5cb8-4704-bb2f-34ce0cfaf1ff.png",
-      "https://via.placeholder.com/600x400/0f3460/eee?text=Breach+Protocol+Matrix",
+      "/assets/screenshots/breach-protocol-1.png",
+      "/assets/screenshots/breach-protocol-2.png",
+      "/assets/screenshots/breach-protocol-3.png",
     ],
     deploymentUrl: "https://gearofrage.github.io/BreachProtocol/",
     githubUrl: "https://github.com/GearOfRage/BreachProtocol",
     featured: true,
-    technologies: ["Unity", "WebGL", "C#"],
+    technologies: ["Unity", "C#", "WebGL"],
     createdDate: "2024-02-20",
   },
   {
@@ -37,20 +39,20 @@ export const gamesData = [
     title: "Ukraine Map Quiz",
     description:
       "Educational quiz game about Ukraine places. Test your knowledge of Ukrainian regions and cities with two difficulty modes. Features interactive map with visual feedback and score tracking. Supports fullscreen mode for better experience.",
-    tags: ["quiz", "educational", "geography", "ukraine", "desktop"],
+    tags: ["quiz", "educational", "geography", "ukraine"],
     screenshots: [
-      "https://user-images.githubusercontent.com/83924241/197340228-725d5e64-551b-4a3c-b119-0af2ada1cd5a.png",
-      "https://user-images.githubusercontent.com/83924241/197340870-3d9a9f6f-4874-43ad-b039-9aa8142aa95d.png",
+      "/assets/screenshots/ukraine-map-1.png",
+      "/assets/screenshots/ukraine-map-2.png",
+      "/assets/screenshots/ukraine-map-3.png",
     ],
     deploymentUrl: "https://gearofrage.github.io/ukraine-map/",
     githubUrl: "https://github.com/GearOfRage/ukraine-map",
-    featured: false,
-    technologies: ["Unity", "Desktop App", "Interactive Map"],
+    featured: true,
+    technologies: ["Unity", "C#", "WebGL"],
     createdDate: "2022-10-22",
   },
 ];
 
-// Get all unique tags for filtering
 export const getAllTags = () => {
   const tagSet = new Set();
   gamesData.forEach((game) => {
@@ -59,7 +61,6 @@ export const getAllTags = () => {
   return Array.from(tagSet).sort();
 };
 
-// Get featured games
 export const getFeaturedGames = () => {
   return gamesData.filter((game) => game.featured);
 };

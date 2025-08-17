@@ -8,72 +8,6 @@
   top: 20px;
 }
 
-.search-bar-container {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-bottom: 24px;
-}
-
-.search-input-wrapper {
-  flex: 1;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.search-icon {
-  position: absolute;
-  left: 16px;
-  font-size: 1.1rem;
-  color: #9ca3af;
-  z-index: 1;
-}
-
-.search-input {
-  width: 100%;
-  padding: 14px 16px 14px 48px;
-  border: 2px solid #374151;
-  border-radius: 12px;
-  font-size: 1rem;
-  background: #1f2937;
-  color: #ffffff;
-  transition: all 0.3s ease;
-  outline: none;
-}
-
-.search-input:focus {
-  border-color: #dc2626;
-  background: #111827;
-  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2);
-}
-
-.search-input::placeholder {
-  color: #9ca3af;
-}
-
-.clear-search {
-  position: absolute;
-  right: 12px;
-  background: #ef4444;
-  color: white;
-  border: none;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 0.8rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-}
-
-.clear-search:hover {
-  background: #dc2626;
-  transform: scale(1.1);
-}
-
 .sort-select {
   padding: 14px 16px;
   border: 2px solid #374151;
@@ -91,6 +25,18 @@
   border-color: #dc2626;
   background: #111827;
   box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2);
+}
+
+.sort-section {
+  margin-bottom: 24px;
+}
+
+.sort-label {
+  display: block;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
 }
 
 .tags-section {
@@ -232,16 +178,6 @@
     position: static;
   }
 
-  .search-bar-container {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .sort-select {
-    min-width: 160px;
-    width: auto;
-  }
-
   .tags-header {
     flex-direction: row;
     align-items: center;
@@ -251,15 +187,6 @@
 @media (max-width: 768px) {
   .search-filter-container {
     padding: 20px;
-  }
-
-  .search-bar-container {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .sort-select {
-    width: 100%;
   }
 
   .tags-header {

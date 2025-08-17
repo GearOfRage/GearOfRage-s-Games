@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from "react";
 import "./App.css";
 import Header from "./components/Header";
+import SearchBar from "./components/SearchBar";
 import SearchAndFilter from "./components/SearchAndFilter";
 import GameCard from "./components/GameCard";
 import Pagination from "./components/Pagination";
@@ -9,7 +10,7 @@ import { gamesData, getAllTags } from "./data/games";
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedTags, setSelectedTags] = useState([]);
-  const [sortBy, setSortBy] = useState("newest");
+  const [sortBy, setSortBy] = useState("featured");
   const [currentPage, setCurrentPage] = useState(1);
   const gamesPerPage = 6;
 
@@ -84,6 +85,12 @@ function App() {
         </aside>
 
         <div className="content-area">
+          <SearchBar
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            gamesCount={filteredAndSortedGames.length}
+          />
+
           {filteredAndSortedGames.length === 0 ? (
             <div className="no-results">
               <div className="no-results-content">
@@ -94,20 +101,14 @@ function App() {
             </div>
           ) : (
             <>
-              <div className="results-summary">
-                <h2>
-                  {filteredAndSortedGames.length} Game
-                  {filteredAndSortedGames.length !== 1 ? "s" : ""} Found
-                </h2>
-                {(searchTerm || selectedTags.length > 0) && (
-                  <p className="filter-summary">
-                    {searchTerm && `Searching for "${searchTerm}"`}
-                    {searchTerm && selectedTags.length > 0 && " • "}
-                    {selectedTags.length > 0 &&
-                      `Filtered by: ${selectedTags.join(", ")}`}
-                  </p>
-                )}
-              </div>
+              {(searchTerm || selectedTags.length > 0) && (
+                <div className="filter-summary">
+                  {searchTerm && `Searching for "${searchTerm}"`}
+                  {searchTerm && selectedTags.length > 0 && " • "}
+                  {selectedTags.length > 0 &&
+                    `Filtered by: ${selectedTags.join(", ")}`}
+                </div>
+              )}
 
               <div className="games-grid">
                 {currentGames.map((game) => (
