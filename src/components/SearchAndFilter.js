@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./SearchAndFilter.css";
 
 const SearchAndFilter = ({
@@ -10,6 +11,8 @@ const SearchAndFilter = ({
   searchTerm,
   setSearchTerm,
 }) => {
+  const { t } = useTranslation();
+
   const handleTagToggle = (tag) => {
     setSelectedTags((prev) =>
       prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
@@ -25,25 +28,27 @@ const SearchAndFilter = ({
   return (
     <div className="search-filter-container">
       <div className="sort-section">
-        <label className="sort-label">Sort by:</label>
+        <label className="sort-label">{t("filter.sortBy")}</label>
         <select
           value={sortBy}
           onChange={(e) => setSortBy(e.target.value)}
           className="sort-select"
         >
-          <option value="newest">Newest First</option>
-          <option value="oldest">Oldest First</option>
-          <option value="alphabetical">A-Z</option>
-          <option value="featured">Featured First</option>
+          <option value="newest">{t("filter.sortOptions.newest")}</option>
+          <option value="oldest">{t("filter.sortOptions.oldest")}</option>
+          <option value="alphabetical">
+            {t("filter.sortOptions.alphabetical")}
+          </option>
+          <option value="featured">{t("filter.sortOptions.featured")}</option>
         </select>
       </div>
 
       <div className="tags-section">
         <div className="tags-header">
-          <h4>Filter by Tags:</h4>
+          <h4>{t("filter.filterByTags")}</h4>
           {selectedTags.length > 0 && (
             <button className="clear-filters" onClick={clearAllFilters}>
-              Clear All Filters
+              {t("filter.clearFilters")}
             </button>
           )}
         </div>
@@ -68,7 +73,7 @@ const SearchAndFilter = ({
 
       {(searchTerm || selectedTags.length > 0) && (
         <div className="active-filters">
-          <span className="filters-label">Active filters:</span>
+          <span className="filters-label">{t("filter.activeFilters")}</span>
           {searchTerm && (
             <span className="active-filter">
               Search: "{searchTerm}"

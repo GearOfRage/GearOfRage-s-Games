@@ -1,5 +1,7 @@
 import React, { useState, useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import "./App.css";
+import "./i18n/i18n";
 import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
 import SearchAndFilter from "./components/SearchAndFilter";
@@ -9,6 +11,7 @@ import ImageModal from "./components/ImageModal";
 import { gamesData, getAllTags } from "./data/games";
 
 function App() {
+  const { t } = useTranslation();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedTags, setSelectedTags] = useState([]);
   const [sortBy, setSortBy] = useState("featured");
@@ -138,8 +141,8 @@ function App() {
             <div className="no-results">
               <div className="no-results-content">
                 <span className="no-results-icon">🎮</span>
-                <h3>No games found</h3>
-                <p>Try adjusting your search terms or removing some filters.</p>
+                <h3>{t("search.noResults.title")}</h3>
+                <p>{t("search.noResults.message")}</p>
               </div>
             </div>
           ) : (
@@ -177,10 +180,9 @@ function App() {
 
       <footer className="footer">
         <div className="container">
-          <p>
-            Made with ❤️ by a passionate game developer • All games are open
-            source and free to play
-          </p>
+          <div className="footer-content">
+            <p>{t("footer.madeWith")}</p>
+          </div>
         </div>
       </footer>
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./Pagination.css";
 
 const Pagination = ({
@@ -8,6 +9,7 @@ const Pagination = ({
   totalItems,
   itemsPerPage,
 }) => {
+  const { t } = useTranslation();
   const getPageNumbers = () => {
     const pages = [];
     const maxVisiblePages = 5;
@@ -52,7 +54,11 @@ const Pagination = ({
     <div className="pagination-container">
       <div className="pagination-info">
         <span>
-          Showing {startItem}-{endItem} of {totalItems} games
+          {t("pagination.showing", {
+            start: startItem,
+            end: endItem,
+            total: totalItems,
+          })}
         </span>
       </div>
 
@@ -62,7 +68,7 @@ const Pagination = ({
           onClick={() => onPageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
-          ← Previous
+          ← {t("pagination.previous")}
         </button>
 
         <div className="page-numbers">
@@ -85,7 +91,7 @@ const Pagination = ({
           onClick={() => onPageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
         >
-          Next →
+          {t("pagination.next")} →
         </button>
       </div>
     </div>

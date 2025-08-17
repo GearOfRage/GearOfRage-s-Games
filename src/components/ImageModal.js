@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./ImageModal.css";
 
 const ImageModal = ({
@@ -10,6 +11,7 @@ const ImageModal = ({
   currentIndex,
   onNavigate,
 }) => {
+  const { t } = useTranslation();
   const handleBackdropClick = (e) => {
     if (e.target === e.currentTarget) {
       onClose();
@@ -60,7 +62,11 @@ const ImageModal = ({
   return (
     <div className="image-modal-overlay" onClick={handleBackdropClick}>
       <div className="image-modal-content">
-        <button className="image-modal-close" onClick={onClose}>
+        <button
+          className="image-modal-close"
+          onClick={onClose}
+          title={t("modal.closeModal")}
+        >
           ✕
         </button>
 
@@ -69,7 +75,7 @@ const ImageModal = ({
             <button
               className="image-modal-nav image-modal-prev"
               onClick={() => onNavigate("prev")}
-              title="Previous image (Left arrow)"
+              title={t("modal.previousImage")}
             >
               ‹
             </button>
@@ -81,7 +87,7 @@ const ImageModal = ({
             <button
               className="image-modal-nav image-modal-next"
               onClick={() => onNavigate("next")}
-              title="Next image (Right arrow)"
+              title={t("modal.nextImage")}
             >
               ›
             </button>
@@ -91,12 +97,15 @@ const ImageModal = ({
         <div className="image-modal-info">
           {hasMultipleImages && (
             <div className="image-modal-counter">
-              {currentIndex + 1} / {game.screenshots.length}
+              {t("modal.imageCounter", {
+                current: currentIndex + 1,
+                total: game.screenshots.length,
+              })}
             </div>
           )}
           <div className="image-modal-actions">
             <button className="image-modal-open-new-tab" onClick={openInNewTab}>
-              🔗 Open in New Tab
+              {t("modal.openInNewTab")}
             </button>
           </div>
         </div>

@@ -24,11 +24,15 @@
   margin: 0 auto;
   padding: 0 24px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   position: relative;
   z-index: 2;
   text-align: center;
+}
+
+.header-controls {
+  flex: none;
 }
 
 .logo-section {
@@ -173,6 +177,18 @@
   }
 }
 
+@media (max-width: 768px) {
+  .header-content {
+    justify-content: center;
+  }
+
+  .header-controls {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+  }
+}
+
 @media (max-width: 480px) {
   .site-title {
     font-size: 2rem;
@@ -184,5 +200,9 @@
 
   .site-subtitle {
     font-size: 1rem;
+  }
+
+  .header-controls {
+    right: 16px;
   }
 }

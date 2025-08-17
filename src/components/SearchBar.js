@@ -1,14 +1,17 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./SearchBar.css";
 
 const SearchBar = ({ searchTerm, setSearchTerm, gamesCount }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="search-bar-section">
       <div className="search-input-wrapper">
         <span className="search-icon">🔍</span>
         <input
           type="text"
-          placeholder="Search games..."
+          placeholder={t("search.placeholder")}
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="search-input"
@@ -21,7 +24,7 @@ const SearchBar = ({ searchTerm, setSearchTerm, gamesCount }) => {
       </div>
 
       <div className="games-count">
-        {gamesCount} game{gamesCount !== 1 ? "s" : ""} found
+        {t("search.gamesFound", { count: gamesCount })}
       </div>
     </div>
   );

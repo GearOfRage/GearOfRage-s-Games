@@ -1,18 +1,23 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./Header.css";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Header = () => {
+  const { t } = useTranslation();
+
   return (
     <header className="header">
       <div className="header-content">
         <div className="logo-section">
           <h1 className="site-title">
             <span className="gear-icon">⚙️</span>
-            Gear of Rage Games
+            {t("header.title")}
           </h1>
-          <p className="site-subtitle">
-            A collection of creative game demos and experiments
-          </p>
+          <p className="site-subtitle">{t("header.subtitle")}</p>
+        </div>
+        <div className="header-controls">
+          <LanguageSwitcher />
         </div>
       </div>
 

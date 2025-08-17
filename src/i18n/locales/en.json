@@ -1,0 +1,54 @@
+{
+  "header": {
+    "title": "Gear of Rage Games",
+    "subtitle": "A collection of creative game demos and experiments"
+  },
+  "search": {
+    "placeholder": "Search games...",
+    "gamesFound": "{{count}} games found",
+    "noResults": {
+      "title": "No games found",
+      "message": "Try adjusting your search terms or removing some filters."
+    }
+  },
+  "filter": {
+    "sortBy": "Sort by:",
+    "filterByTags": "Filter by Tags:",
+    "clearFilters": "Clear",
+    "activeFilters": "Active filters:",
+    "sortOptions": {
+      "featured": "Featured First",
+      "newest": "Newest First",
+      "oldest": "Oldest First",
+      "alphabetical": "A-Z"
+    }
+  },
+  "game": {
+    "playButton": "🎮 Play Game",
+    "codeButton": "📦 View Code",
+    "builtWith": "Built with:",
+    "featured": "Featured",
+    "viewFullSize": "View full size"
+  },
+  "modal": {
+    "openInNewTab": "🔗 Open in New Tab",
+    "imageCounter": "Image {{current}} of {{total}}",
+    "previousImage": "Previous image",
+    "nextImage": "Next image",
+    "closeModal": "Close modal"
+  },
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {{current}} of {{total}}",
+    "showing": "Showing {{start}}-{{end}} of {{total}} games"
+  },
+  "footer": {
+    "madeWith": "Made by Gear of Rage with ❤️"
+  },
+  "language": {
+    "switch": "Language",
+    "english": "English",
+    "ukrainian": "Українська"
+  }
+}

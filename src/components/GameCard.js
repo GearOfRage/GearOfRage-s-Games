@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./GameCard.css";
 
 const GameCard = ({ game, onImageClick }) => {
+  const { t } = useTranslation();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const nextImage = () => {
@@ -18,7 +20,9 @@ const GameCard = ({ game, onImageClick }) => {
 
   return (
     <div className={`game-card ${game.featured ? "featured" : ""}`}>
-      {game.featured && <div className="featured-badge">Featured</div>}
+      {game.featured && (
+        <div className="featured-badge">{t("game.featured")}</div>
+      )}
 
       <div className="game-card-image-container">
         <img
@@ -67,7 +71,7 @@ const GameCard = ({ game, onImageClick }) => {
               `${game.title} screenshot ${currentImageIndex + 1}`
             )
           }
-          title="View full size"
+          title={t("game.viewFullSize")}
         >
           🔍
         </button>
@@ -86,7 +90,9 @@ const GameCard = ({ game, onImageClick }) => {
         </div>
 
         <div className="technologies">
-          <small>Built with: {game.technologies.join(", ")}</small>
+          <small>
+            {t("game.builtWith")} {game.technologies.join(", ")}
+          </small>
         </div>
 
         <div className="game-links">
@@ -96,7 +102,7 @@ const GameCard = ({ game, onImageClick }) => {
             rel="noopener noreferrer"
             className="link-button play-button"
           >
-            🎮 Play Game
+            {t("game.playButton")}
           </a>
           <a
             href={game.githubUrl}
@@ -104,7 +110,7 @@ const GameCard = ({ game, onImageClick }) => {
             rel="noopener noreferrer"
             className="link-button github-button"
           >
-            📦 View Code
+            {t("game.codeButton")}
           </a>
         </div>
       </div>

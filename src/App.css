@@ -95,9 +95,36 @@
   border-top: 2px solid #dc2626;
 }
 
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
 .footer p {
   margin: 0;
   font-size: 0.9rem;
+}
+
+.stand-with-ukraine {
+  display: flex;
+  justify-content: center;
+}
+
+.ukraine-banner {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.ukraine-banner:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.ukraine-banner img {
+  height: 28px;
+  width: auto;
 }
 
 /* Responsive Design */
@@ -149,6 +176,15 @@
 
   .no-results-content p {
     font-size: 0.9rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .ukraine-banner img {
+    height: 24px;
   }
 }
 

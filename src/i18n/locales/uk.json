@@ -1,0 +1,57 @@
+{
+  "search": {
+    "placeholder": "Пошук ігор...",
+    "gamesFound_one": "Знайдено {{count}} гру",
+    "gamesFound_few": "Знайдено {{count}} гри",
+    "gamesFound_many": "Знайдено {{count}} ігор",
+    "gamesFound_other": "Знайдено {{count}} ігор",
+    "noResults": {
+      "title": "Ігор не знайдено",
+      "message": "Спробуйте змінити пошукові терміни або видаліть деякі фільтри."
+    }
+  },
+  "header": {
+    "title": "Gear of Rage",
+    "subtitle": "Iгрові демо та експерименти"
+  },
+  "filter": {
+    "sortBy": "Сортувати за:",
+    "filterByTags": "Фільтрувати за тегами:",
+    "clearFilters": "Очистити",
+    "activeFilters": "Активні фільтри:",
+    "sortOptions": {
+      "featured": "Рекомендовані спочатку",
+      "newest": "Найновіші спочатку",
+      "oldest": "Найстаріші спочатку",
+      "alphabetical": "А-Я"
+    }
+  },
+  "game": {
+    "playButton": "🎮 Грати",
+    "codeButton": "📦 Переглянути код",
+    "builtWith": "Створено з:",
+    "featured": "Рекомендована",
+    "viewFullSize": "Переглянути у повному розмірі"
+  },
+  "modal": {
+    "openInNewTab": "🔗 Відкрити в новій вкладці",
+    "imageCounter": "Зображення {{current}} з {{total}}",
+    "previousImage": "Попереднє",
+    "nextImage": "Наступне",
+    "closeModal": "Закрити"
+  },
+  "pagination": {
+    "previous": "Попередня",
+    "next": "Наступна",
+    "page": "Сторінка {{current}} з {{total}}",
+    "showing": "Показано {{start}}-{{end}} з {{total}} ігор"
+  },
+  "footer": {
+    "madeWith": "Створено Gear of Rage з ❤️"
+  },
+  "language": {
+    "switch": "Мова",
+    "english": "English",
+    "ukrainian": "Українська"
+  }
+}
