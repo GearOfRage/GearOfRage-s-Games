@@ -14,17 +14,6 @@ const Header = () => {
             A collection of creative game demos and experiments
           </p>
         </div>
-
-        <div className="header-stats">
-          <div className="stat-item">
-            <span className="stat-number">10+</span>
-            <span className="stat-label">Games</span>
-          </div>
-          <div className="stat-item">
-            <span className="stat-number">Open Source</span>
-            <span className="stat-label">& Free</span>
-          </div>
-        </div>
       </div>
 
       <div className="header-decoration">

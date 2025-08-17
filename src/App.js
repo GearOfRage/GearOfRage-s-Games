@@ -71,7 +71,7 @@ function App() {
       <Header />
 
       <main className="main-content">
-        <div className="container">
+        <aside className="sidebar">
           <SearchAndFilter
             searchTerm={searchTerm}
             setSearchTerm={setSearchTerm}
@@ -81,7 +81,9 @@ function App() {
             sortBy={sortBy}
             setSortBy={setSortBy}
           />
+        </aside>
 
+        <div className="content-area">
           {filteredAndSortedGames.length === 0 ? (
             <div className="no-results">
               <div className="no-results-content">

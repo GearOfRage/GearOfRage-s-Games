@@ -29,7 +29,7 @@ const SearchAndFilter = ({
           <span className="search-icon">🔍</span>
           <input
             type="text"
-            placeholder="Search games by title or description..."
+            placeholder="Search games..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="search-input"
