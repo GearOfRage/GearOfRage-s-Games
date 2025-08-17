@@ -178,6 +178,7 @@ function App() {
         <div className="container">
           <div className="footer-content">
             <p>{t("footer.madeWith")}</p>
+            <p>{t("footer.copyright", { year: new Date().getFullYear() })}</p>
           </div>
         </div>
       </footer>

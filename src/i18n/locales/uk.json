@@ -10,7 +10,7 @@
     "searchLabel": "Пошук:",
     "noResults": {
       "title": "Ігор не знайдено",
-      "message": "Спробуйте змінити пошукові терміни або видаліть деякі фільтри."
+      "message": "Спробуйте змінити пошук або фільтри."
     }
   },
   "header": {
@@ -50,7 +50,8 @@
     "showing": "Показано {{start}}-{{end}} з {{total}} ігор"
   },
   "footer": {
-    "madeWith": "Створено Gear of Rage з ❤️"
+    "madeWith": "Створено Gear of Rage з ❤️",
+    "copyright": "© 2020-{{year}}"
   },
   "language": {
     "switch": "Мова",

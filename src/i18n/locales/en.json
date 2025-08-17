@@ -1,6 +1,6 @@
 {
   "header": {
-    "title": "Gear of Rage Games",
+    "title": "Gear of Rage",
     "subtitle": "A collection of creative game demos and experiments"
   },
   "search": {
@@ -47,7 +47,8 @@
     "showing": "Showing {{start}}-{{end}} of {{total}} games"
   },
   "footer": {
-    "madeWith": "Made by Gear of Rage with ❤️"
+    "madeWith": "Made by Gear of Rage with ❤️",
+    "copyright": "© 2020-{{year}}"
   },
   "language": {
     "switch": "Language",
