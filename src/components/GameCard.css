@@ -1,37 +1,40 @@
 .game-card {
-  background: #ffffff;
+  background: #111827;
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
+  border: 1px solid #374151;
 }
 
 .game-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 40px rgba(220, 38, 38, 0.2);
+  border-color: #dc2626;
 }
 
 .game-card.featured {
-  border: 2px solid #6366f1;
-  background: linear-gradient(145deg, #ffffff 0%, #f8faff 100%);
+  border: 2px solid #dc2626;
+  background: linear-gradient(145deg, #111827 0%, #1f2937 100%);
+  box-shadow: 0 4px 20px rgba(220, 38, 38, 0.3);
 }
 
 .featured-badge {
   position: absolute;
   top: 12px;
   right: 12px;
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
   color: white;
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 0.75rem;
   font-weight: 600;
   z-index: 10;
-  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.5);
 }
 
 .game-card-image-container {
@@ -128,13 +131,13 @@
 .game-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1f2937;
+  color: #ffffff;
   margin: 0 0 12px 0;
   line-height: 1.3;
 }
 
 .game-description {
-  color: #6b7280;
+  color: #d1d5db;
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0 0 16px 0;
@@ -149,25 +152,26 @@
 }
 
 .tag {
-  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
-  color: #374151;
+  background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+  color: #f9fafb;
   padding: 4px 10px;
   border-radius: 16px;
   font-size: 0.8rem;
   font-weight: 500;
-  border: 1px solid #d1d5db;
+  border: 1px solid #6b7280;
   transition: all 0.2s ease;
 }
 
 .tag:hover {
-  background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
   transform: translateY(-1px);
+  border-color: #dc2626;
 }
 
 .technologies {
   margin-bottom: 20px;
   padding-top: 8px;
-  border-top: 1px solid #f3f4f6;
+  border-top: 1px solid #374151;
 }
 
 .technologies small {
@@ -216,27 +220,29 @@
 }
 
 .play-button {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
   color: white;
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
 }
 
 .play-button:hover {
-  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.6);
 }
 
 .github-button {
-  background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+  background: linear-gradient(135deg, #000000 0%, #1f2937 100%);
   color: white;
-  box-shadow: 0 4px 12px rgba(55, 65, 81, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  border: 1px solid #374151;
 }
 
 .github-button:hover {
-  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  background: linear-gradient(135deg, #1f2937 0%, #000000 100%);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(55, 65, 81, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  border-color: #6b7280;
 }
 
 @media (max-width: 768px) {

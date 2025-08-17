@@ -4,7 +4,7 @@
 
 .App {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d1b1b 100%);
 }
 
 .main-content {
@@ -26,16 +26,17 @@
 .results-summary h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: #1f2937;
+  color: #ffffff;
   margin: 0 0 8px 0;
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(220, 38, 38, 0.3);
 }
 
 .filter-summary {
-  color: #6b7280;
+  color: #d1d5db;
   font-size: 1rem;
   margin: 0;
   font-style: italic;
@@ -58,11 +59,11 @@
 
 .no-results-content {
   text-align: center;
-  background: #ffffff;
+  background: #111827;
   padding: 48px 32px;
   border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 1px solid #f3f4f6;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid #374151;
   max-width: 400px;
 }
 
@@ -76,23 +77,24 @@
 .no-results-content h3 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #374151;
+  color: #ffffff;
   margin: 0 0 12px 0;
 }
 
 .no-results-content p {
-  color: #6b7280;
+  color: #d1d5db;
   font-size: 1rem;
   margin: 0;
   line-height: 1.5;
 }
 
 .footer {
-  background: #1f2937;
-  color: #9ca3af;
+  background: #000000;
+  color: #dc2626;
   padding: 24px 0;
   text-align: center;
   margin-top: 60px;
+  border-top: 2px solid #dc2626;
 }
 
 .footer p {

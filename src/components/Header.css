@@ -1,10 +1,11 @@
 .header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #7f1d1d 0%, #000000 100%);
   color: white;
   padding: 60px 0;
   position: relative;
   overflow: hidden;
   margin-bottom: 40px;
+  border-bottom: 3px solid #dc2626;
 }
 
 .header::before {
@@ -37,11 +38,11 @@
   font-size: 3.5rem;
   font-weight: 800;
   margin: 0 0 16px 0;
-  background: linear-gradient(45deg, #ffffff 0%, #f0f9ff 100%);
+  background: linear-gradient(45deg, #ffffff 0%, #fca5a5 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 4px 20px rgba(220, 38, 38, 0.5);
   display: flex;
   align-items: center;
   gap: 12px;
@@ -80,19 +81,20 @@
 
 .stat-item {
   text-align: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(220, 38, 38, 0.2);
   padding: 20px 24px;
   border-radius: 16px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(220, 38, 38, 0.5);
+  box-shadow: 0 8px 32px rgba(220, 38, 38, 0.2);
   transition: all 0.3s ease;
 }
 
 .stat-item:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(220, 38, 38, 0.3);
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 40px rgba(220, 38, 38, 0.4);
+  border-color: rgba(220, 38, 38, 0.8);
 }
 
 .stat-number {

@@ -5,15 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f8fafc;
-  color: #1f2937;
+  background: #0f0f0f;
+  color: #ffffff;
   line-height: 1.6;
 }
 
 code {
   font-family: "Fira Code", source-code-pro, Menlo, Monaco, Consolas,
     "Courier New", monospace;
-  background: #f3f4f6;
+  background: #374151;
+  color: #ffffff;
   padding: 2px 6px;
   border-radius: 4px;
   font-size: 0.9em;
