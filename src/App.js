@@ -5,6 +5,7 @@ import SearchBar from "./components/SearchBar";
 import SearchAndFilter from "./components/SearchAndFilter";
 import GameCard from "./components/GameCard";
 import Pagination from "./components/Pagination";
+import ImageModal from "./components/ImageModal";
 import { gamesData, getAllTags } from "./data/games";
 
 function App() {
@@ -13,6 +14,13 @@ function App() {
   const [sortBy, setSortBy] = useState("featured");
   const [currentPage, setCurrentPage] = useState(1);
   const gamesPerPage = 6;
+
+  // Modal state
+  const [modalImage, setModalImage] = useState(null);
+  const [modalAlt, setModalAlt] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalGame, setModalGame] = useState(null);
+  const [modalImageIndex, setModalImageIndex] = useState(0);
 
   const availableTags = getAllTags();
 
@@ -67,6 +75,41 @@ function App() {
     setCurrentPage(1);
   }, [searchTerm, selectedTags, sortBy]);
 
+  // Modal handlers
+  const openModal = (imageSrc, imageAlt, game, imageIndex = 0) => {
+    setModalImage(imageSrc);
+    setModalAlt(imageAlt);
+    setModalGame(game);
+    setModalImageIndex(imageIndex);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setModalImage(null);
+    setModalAlt("");
+    setModalGame(null);
+    setModalImageIndex(0);
+  };
+
+  const navigateImage = (direction) => {
+    if (!modalGame || !modalGame.screenshots) return;
+
+    let newIndex = modalImageIndex;
+    if (direction === "next") {
+      newIndex = (modalImageIndex + 1) % modalGame.screenshots.length;
+    } else if (direction === "prev") {
+      newIndex =
+        modalImageIndex === 0
+          ? modalGame.screenshots.length - 1
+          : modalImageIndex - 1;
+    }
+
+    setModalImageIndex(newIndex);
+    setModalImage(modalGame.screenshots[newIndex]);
+    setModalAlt(`${modalGame.title} - Screenshot ${newIndex + 1}`);
+  };
+
   return (
     <div className="App">
       <Header />
@@ -112,7 +155,11 @@ function App() {
 
               <div className="games-grid">
                 {currentGames.map((game) => (
-                  <GameCard key={game.id} game={game} />
+                  <GameCard
+                    key={game.id}
+                    game={game}
+                    onImageClick={openModal}
+                  />
                 ))}
               </div>
 
@@ -136,6 +183,16 @@ function App() {
           </p>
         </div>
       </footer>
+
+      <ImageModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        imageSrc={modalImage}
+        imageAlt={modalAlt}
+        game={modalGame}
+        currentIndex={modalImageIndex}
+        onNavigate={navigateImage}
+      />
     </div>
   );
 }

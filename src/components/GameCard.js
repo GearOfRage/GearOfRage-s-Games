@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./GameCard.css";
 
-const GameCard = ({ game }) => {
+const GameCard = ({ game, onImageClick }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const nextImage = () => {
@@ -25,6 +25,16 @@ const GameCard = ({ game }) => {
           src={game.screenshots[currentImageIndex]}
           alt={`${game.title} screenshot ${currentImageIndex + 1}`}
           className="game-card-image"
+          onClick={() =>
+            onImageClick(
+              game.screenshots[currentImageIndex],
+              `${game.title} - Screenshot ${currentImageIndex + 1}`,
+              game,
+              currentImageIndex
+            )
+          }
+          style={{ cursor: "pointer" }}
+          title="Click to view full size"
         />
 
         {game.screenshots.length > 1 && (
@@ -48,6 +58,19 @@ const GameCard = ({ game }) => {
             </div>
           </>
         )}
+
+        <button
+          className="fullsize-view-button"
+          onClick={() =>
+            onImageClick(
+              game.screenshots[currentImageIndex],
+              `${game.title} screenshot ${currentImageIndex + 1}`
+            )
+          }
+          title="View full size"
+        >
+          🔍
+        </button>
       </div>
 
       <div className="game-card-content">
