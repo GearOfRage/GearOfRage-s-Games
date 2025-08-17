@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gear-of-rage-games/static/css/main.cfb5ac81.css",
+    "main.js": "/gear-of-rage-games/static/js/main.951a0d27.js",
+    "static/js/453.6051ec35.chunk.js": "/gear-of-rage-games/static/js/453.6051ec35.chunk.js",
+    "index.html": "/gear-of-rage-games/index.html",
+    "main.cfb5ac81.css.map": "/gear-of-rage-games/static/css/main.cfb5ac81.css.map",
+    "main.951a0d27.js.map": "/gear-of-rage-games/static/js/main.951a0d27.js.map",
+    "453.6051ec35.chunk.js.map": "/gear-of-rage-games/static/js/453.6051ec35.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cfb5ac81.css",
+    "static/js/main.951a0d27.js"
+  ]
+}
