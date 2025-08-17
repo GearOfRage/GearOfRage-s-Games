@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🎮 Gear of Rage Games
 
-## Available Scripts
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-red?style=for-the-badge&logo=github&logoColor=white)](https://gearofrage.github.io/GearOfRage-s-Games)
+[![i18n](https://img.shields.io/badge/i18n-🌐EN_|_💛💙_UA-blue?style=for-the-badge)](https://www.i18next.com/)
 
-In the project directory, you can run:
+**A gaming portfolio showcasing creative game demos and experiments**
 
-### `npm start`
+_Built by Gear of Rage with_ ❤️
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Hero Banner](public/assets/screenshots/portfolio.png)
 
-### `npm test`
+</div>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Live Demo
 
-### `npm run build`
+**[🌐 View Portfolio →](https://gearofrage.github.io/GearOfRage-s-Games)**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Frontend:** React 19, CSS3, HTML5
+- **Internationalization:** React i18next
+- **Build Tool:** Create React App
+- **Deployment:** GitHub Pages
+- **Game Engine:** Unity WebGL
+- **Languages:** JavaScript, C#
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🏃‍♂️ Quick Start
 
-### `npm run eject`
+```bash
+# Clone the repository
+git clone https://github.com/GearOfRage/GearOfRage-s-Games.git
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Navigate to project directory
+cd GearOfRage-s-Games
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Install dependencies
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Start development server
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Open [http://localhost:3000](http://localhost:3000) to view in your browser.
 
-## Learn More
+## 📜 Available Scripts
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| Command          | Description               |
+| ---------------- | ------------------------- |
+| `npm start`      | 🔥 Run development server |
+| `npm run build`  | 📦 Build for production   |
+| `npm run deploy` | 🚀 Deploy to GitHub Pages |
+| `npm test`       | 🧪 Run test suite         |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🌍 Internationalization
 
-### Code Splitting
+This project supports multiple languages:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- 🇺🇸 **English** - Full UI translation
+- 🇺🇦 **Ukrainian** - Complete localization
 
-### Analyzing the Bundle Size
+Language files are located in `src/i18n/locales/`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- `en.json` - English translations
+- `uk.json` - Ukrainian translations
 
-### Making a Progressive Web App
+## 📁 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+src/
+├── components/          # React components
+│   ├── GameCard.js     # Individual game display
+│   ├── Header.js       # Navigation header
+│   ├── SearchBar.js    # Search functionality
+│   └── ...
+├── data/
+│   └── games.js        # Game information data
+├── i18n/
+│   ├── i18n.js         # i18next configuration
+│   └── locales/        # Translation files
+└── App.js              # Main application component
+```
 
-### Advanced Configuration
+## 📄 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+© 2020-2025 Gear of Rage. All rights reserved.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<div align="center">
 
-### `npm run build` fails to minify
+**Made with ❤️ by [Gear of Rage](https://github.com/GearOfRage)**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/GearOfRage)
+
+</div>
