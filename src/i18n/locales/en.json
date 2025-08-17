@@ -6,6 +6,9 @@
   "search": {
     "placeholder": "Search games...",
     "gamesFound": "{{count}} games found",
+    "searchingFor": "Searching for \"{{term}}\"",
+    "filteredBy": "Filtered by: {{tags}}",
+    "searchLabel": "Search:",
     "noResults": {
       "title": "No games found",
       "message": "Try adjusting your search terms or removing some filters."
@@ -50,5 +53,19 @@
     "switch": "Language",
     "english": "English",
     "ukrainian": "Українська"
+  },
+  "games": {
+    "ventureForth": {
+      "title": "Venture Forth",
+      "description": "A strategic match-3 puzzle game with RPG elements. Create chains of matching items to collect gold coins and shields while battling dangerous skulls. Features turn-based combat mechanics and resource management in a medieval fantasy setting."
+    },
+    "breachProtocol": {
+      "title": "Breach Protocol",
+      "description": "Web implementation of the Breach Protocol mini-game from Cyberpunk 2077. Features faithful reproduction of the original hacking mechanics with timer, buffer, and daemon sequences. Multiple difficulty levels with randomized code matrix."
+    },
+    "ukraineMapQuiz": {
+      "title": "Ukraine Map Quiz",
+      "description": "Educational quiz game about Ukraine places. Test your knowledge of Ukrainian regions and cities with two difficulty modes. Features interactive map with visual feedback and score tracking. Supports fullscreen mode for better experience."
+    }
   }
 }

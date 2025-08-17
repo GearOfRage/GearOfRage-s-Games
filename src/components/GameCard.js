@@ -27,12 +27,12 @@ const GameCard = ({ game, onImageClick }) => {
       <div className="game-card-image-container">
         <img
           src={game.screenshots[currentImageIndex]}
-          alt={`${game.title} screenshot ${currentImageIndex + 1}`}
+          alt={`${t(game.titleKey)} screenshot ${currentImageIndex + 1}`}
           className="game-card-image"
           onClick={() =>
             onImageClick(
               game.screenshots[currentImageIndex],
-              `${game.title} - Screenshot ${currentImageIndex + 1}`,
+              `${t(game.titleKey)} - Screenshot ${currentImageIndex + 1}`,
               game,
               currentImageIndex
             )
@@ -68,7 +68,7 @@ const GameCard = ({ game, onImageClick }) => {
           onClick={() =>
             onImageClick(
               game.screenshots[currentImageIndex],
-              `${game.title} screenshot ${currentImageIndex + 1}`
+              `${t(game.titleKey)} screenshot ${currentImageIndex + 1}`
             )
           }
           title={t("game.viewFullSize")}
@@ -78,8 +78,8 @@ const GameCard = ({ game, onImageClick }) => {
       </div>
 
       <div className="game-card-content">
-        <h3 className="game-title">{game.title}</h3>
-        <p className="game-description">{game.description}</p>
+        <h3 className="game-title">{t(game.titleKey)}</h3>
+        <p className="game-description">{t(game.descriptionKey)}</p>
 
         <div className="tags-container">
           {game.tags.map((tag) => (

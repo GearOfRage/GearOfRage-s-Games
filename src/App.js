@@ -30,10 +30,15 @@ function App() {
   // Filter and sort games
   const filteredAndSortedGames = useMemo(() => {
     let filtered = gamesData.filter((game) => {
+      const translatedTitle = t(game.titleKey);
+      const translatedDescription = t(game.descriptionKey);
       const matchesSearch =
         searchTerm === "" ||
         game.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        game.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        translatedTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        translatedDescription
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase()) ||
         game.technologies.some((tech) =>
           tech.toLowerCase().includes(searchTerm.toLowerCase())
         );
@@ -53,7 +58,7 @@ function App() {
         case "oldest":
           return new Date(a.createdDate) - new Date(b.createdDate);
         case "alphabetical":
-          return a.title.localeCompare(b.title);
+          return t(a.titleKey).localeCompare(t(b.titleKey));
         case "featured":
           if (a.featured && !b.featured) return -1;
           if (!a.featured && b.featured) return 1;
@@ -64,7 +69,7 @@ function App() {
     });
 
     return filtered;
-  }, [searchTerm, selectedTags, sortBy]);
+  }, [searchTerm, selectedTags, sortBy, t]);
 
   // Pagination
   const totalPages = Math.ceil(filteredAndSortedGames.length / gamesPerPage);
@@ -110,7 +115,7 @@ function App() {
 
     setModalImageIndex(newIndex);
     setModalImage(modalGame.screenshots[newIndex]);
-    setModalAlt(`${modalGame.title} - Screenshot ${newIndex + 1}`);
+    setModalAlt(`${t(modalGame.titleKey)} - Screenshot ${newIndex + 1}`);
   };
 
   return (
@@ -147,15 +152,6 @@ function App() {
             </div>
           ) : (
             <>
-              {(searchTerm || selectedTags.length > 0) && (
-                <div className="filter-summary">
-                  {searchTerm && `Searching for "${searchTerm}"`}
-                  {searchTerm && selectedTags.length > 0 && " • "}
-                  {selectedTags.length > 0 &&
-                    `Filtered by: ${selectedTags.join(", ")}`}
-                </div>
-              )}
-
               <div className="games-grid">
                 {currentGames.map((game) => (
                   <GameCard

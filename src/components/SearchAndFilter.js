@@ -76,7 +76,7 @@ const SearchAndFilter = ({
           <span className="filters-label">{t("filter.activeFilters")}</span>
           {searchTerm && (
             <span className="active-filter">
-              Search: "{searchTerm}"
+              {t("search.searchLabel")} "{searchTerm}"
               <button onClick={() => setSearchTerm("")}>✕</button>
             </span>
           )}
