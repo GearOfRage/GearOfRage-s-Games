@@ -10,6 +10,7 @@ const Header = () => {
     <header className="header">
       <div className="header-content">
         <div className="logo-section">
+          <span className="brand-eyebrow">{t("header.eyebrow")}</span>
           <h1 className="site-title">
             <span className="gear-icon">⚙️</span>
             {t("header.title")}

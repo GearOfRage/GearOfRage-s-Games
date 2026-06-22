@@ -8,8 +8,8 @@
 }
 
 .pagination-info {
-  color: #d1d5db;
-  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-size: 0.88rem;
 }
 
 .pagination-controls {
@@ -20,14 +20,16 @@
 
 .pagination-button {
   padding: 10px 16px;
-  border: 2px solid #374151;
-  background: #111827;
-  color: #ffffff;
-  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--text);
+  border-radius: var(--radius-sm);
   cursor: pointer;
   font-size: 0.9rem;
-  font-weight: 500;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 600;
+  transition: all 0.3s var(--ease);
   min-width: 44px;
   height: 44px;
   display: flex;
@@ -36,30 +38,31 @@
 }
 
 .pagination-button:hover:not(:disabled) {
-  background: #1f2937;
-  border-color: #6b7280;
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.18);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .pagination-button:disabled {
-  opacity: 0.5;
+  opacity: 0.4;
   cursor: not-allowed;
-  background: #374151;
-  color: #6b7280;
 }
 
 .pagination-button.active {
-  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
-  border-color: #dc2626;
-  color: white;
-  box-shadow: 0 4px 16px rgba(220, 38, 38, 0.4);
+  background: linear-gradient(135deg, var(--crimson) 0%, var(--crimson-deep) 100%);
+  border-color: var(--crimson);
+  color: #fff;
+  box-shadow: 0 4px 16px var(--crimson-glow);
   transform: translateY(-2px);
 }
 
 .pagination-button.active:hover {
-  background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%);
-  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.6);
+  background: linear-gradient(
+    135deg,
+    var(--crimson-bright) 0%,
+    var(--crimson) 100%
+  );
+  box-shadow: 0 6px 20px var(--crimson-glow);
 }
 
 .pagination-button.ellipsis {
@@ -67,7 +70,7 @@
   background: transparent;
   cursor: default;
   font-weight: 700;
-  color: #9ca3af;
+  color: var(--text-dim);
 }
 
 .pagination-button.ellipsis:hover {
@@ -79,14 +82,6 @@
 .nav-button {
   padding: 10px 20px;
   font-weight: 600;
-}
-
-.nav-button:not(:disabled) {
-  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
-}
-
-.nav-button:hover:not(:disabled) {
-  background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
 }
 
 .page-numbers {

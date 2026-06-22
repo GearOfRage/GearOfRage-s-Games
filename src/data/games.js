@@ -1,6 +1,30 @@
 // Real games data
 export const gamesData = [
   {
+    id: 4,
+    title: "Spawn Outside",
+    titleKey: "games.spawnOutside.title",
+    descriptionKey: "games.spawnOutside.description",
+    tags: [
+      "survival",
+      "roguelite",
+      "bullet-heaven",
+      "action",
+      "top-down",
+      "unity",
+      "webgl",
+    ],
+    screenshots: [
+      "https://github.com/GearOfRage/GearOfRage-s-Games/blob/gh-pages/assets/screenshots/spawn-outside-1.png?raw=true",
+      "https://github.com/GearOfRage/GearOfRage-s-Games/blob/gh-pages/assets/screenshots/spawn-outside-3.png?raw=true",
+    ],
+    deploymentUrl: "https://spawn-outside.hhharm.org/",
+    githubUrl: null,
+    featured: true,
+    technologies: ["Unity", "C#", "WebGL"],
+    createdDate: "2026-04-13",
+  },
+  {
     id: 1,
     title: "Venture Forth",
     titleKey: "games.ventureForth.title",

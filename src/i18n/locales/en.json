@@ -1,5 +1,6 @@
 {
   "header": {
+    "eyebrow": "Indie Game Studio",
     "title": "Gear of Rage",
     "subtitle": "A collection of creative game demos and experiments"
   },
@@ -56,6 +57,10 @@
     "ukrainian": "Українська"
   },
   "games": {
+    "spawnOutside": {
+      "title": "Spawn Outside",
+      "description": "A top-down survival roguelite where relentless waves of enemies close in from every side. Your weapons fire on their own — focus on movement and positioning while scooping up experience to level up fast. Every level-up offers a choice of upgrades and fresh weapons, from spread shots and arcane splinters to chain lightning, frost rays, and orbiting electric spheres. Push through escalating waves, outlast boss encounters, and build lasting mastery that carries from run to run across an endless, ever-shifting world."
+    },
     "ventureForth": {
       "title": "Venture Forth",
       "description": "A strategic match-3 puzzle game with RPG elements. Create chains of matching items to collect gold coins and shields while battling dangerous skulls. Features turn-based combat mechanics and resource management in a medieval fantasy setting."

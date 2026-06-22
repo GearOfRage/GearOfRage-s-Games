@@ -1,22 +1,34 @@
 .header {
-  background: linear-gradient(135deg, #7f1d1d 0%, #000000 100%);
-  color: white;
-  padding: 60px 0;
   position: relative;
   overflow: hidden;
+  padding: 72px 0 56px;
   margin-bottom: 40px;
-  border-bottom: 3px solid #dc2626;
+  color: #fff;
+  background: linear-gradient(
+    180deg,
+    rgba(127, 29, 29, 0.28) 0%,
+    rgba(20, 12, 13, 0.1) 60%,
+    transparent 100%
+  );
+  border-bottom: 1px solid var(--border);
 }
 
-.header::before {
+/* Glowing seam under the header */
+.header::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-  opacity: 0.3;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(640px, 80%);
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--crimson) 50%,
+    transparent
+  );
+  box-shadow: 0 0 22px var(--crimson-glow);
 }
 
 .header-content {
@@ -24,39 +36,64 @@
   margin: 0 auto;
   padding: 0 24px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  gap: 18px;
   position: relative;
   z-index: 2;
   text-align: center;
 }
 
 .header-controls {
-  flex: none;
+  position: absolute;
+  top: 0;
+  right: 24px;
 }
 
 .logo-section {
-  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--crimson-bright);
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--crimson-glow-soft);
+  border: 1px solid var(--border-crimson);
 }
 
 .site-title {
-  font-size: 3.5rem;
-  font-weight: 800;
-  margin: 0 0 16px 0;
-  background: linear-gradient(45deg, #ffffff 0%, #fca5a5 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  text-shadow: 0 4px 20px rgba(220, 38, 38, 0.5);
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 6vw, 4.25rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0;
   display: flex;
   align-items: center;
-  gap: 12px;
-  line-height: 1.1;
+  gap: 18px;
+  line-height: 1.05;
+  background: linear-gradient(180deg, #ffffff 0%, #fca5a5 130%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 6px 24px rgba(220, 38, 38, 0.4));
 }
 
 .gear-icon {
-  font-size: 3rem;
-  animation: rotate 10s linear infinite;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  font-size: 0.85em;
+  animation: rotate 12s linear infinite;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));
+  -webkit-text-fill-color: initial;
 }
 
 @keyframes rotate {
@@ -69,20 +106,17 @@
 }
 
 .site-subtitle {
-  font-size: 1.2rem;
-  opacity: 0.9;
+  font-size: clamp(1rem, 2.2vw, 1.18rem);
+  color: var(--text-muted);
   margin: 0;
-  font-weight: 300;
-  max-width: 500px;
-  line-height: 1.5;
+  font-weight: 400;
+  max-width: 520px;
+  line-height: 1.55;
 }
 
 .header-decoration {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   pointer-events: none;
   z-index: 1;
 }
@@ -90,31 +124,31 @@
 .floating-element {
   position: absolute;
   font-size: 2rem;
-  opacity: 0.15;
-  animation: float 6s ease-in-out infinite;
+  opacity: 0.1;
+  animation: float 7s ease-in-out infinite;
 }
 
 .element-1 {
-  top: 20%;
-  left: 10%;
+  top: 22%;
+  left: 12%;
   animation-delay: 0s;
 }
 
 .element-2 {
-  top: 60%;
-  right: 15%;
+  top: 58%;
+  right: 14%;
   animation-delay: 1.5s;
 }
 
 .element-3 {
   top: 30%;
-  right: 25%;
+  right: 24%;
   animation-delay: 3s;
 }
 
 .element-4 {
-  bottom: 20%;
-  left: 20%;
+  bottom: 18%;
+  left: 22%;
   animation-delay: 4.5s;
 }
 
@@ -131,45 +165,23 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .header-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 32px;
-  }
-
-  .site-title {
-    font-size: 3rem;
-    justify-content: center;
-  }
-
-  .gear-icon {
-    font-size: 2.5rem;
-  }
-}
-
 @media (max-width: 768px) {
   .header {
-    padding: 40px 0;
+    padding: 56px 0 44px;
   }
 
   .header-content {
     padding: 0 20px;
-    gap: 24px;
+  }
+
+  .header-controls {
+    top: 16px;
+    right: 16px;
   }
 
   .site-title {
-    font-size: 2.5rem;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .gear-icon {
-    font-size: 2rem;
-  }
-
-  .site-subtitle {
-    font-size: 1.1rem;
+    flex-direction: row;
+    gap: 12px;
   }
 
   .floating-element {
@@ -177,32 +189,9 @@
   }
 }
 
-@media (max-width: 768px) {
-  .header-content {
-    justify-content: center;
-  }
-
-  .header-controls {
-    position: absolute;
-    top: 20px;
-    right: 24px;
-  }
-}
-
 @media (max-width: 480px) {
-  .site-title {
-    font-size: 2rem;
-  }
-
-  .gear-icon {
-    font-size: 1.8rem;
-  }
-
-  .site-subtitle {
-    font-size: 1rem;
-  }
-
-  .header-controls {
-    right: 16px;
+  .brand-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.26em;
   }
 }

@@ -104,14 +104,16 @@ const GameCard = ({ game, onImageClick }) => {
           >
             {t("game.playButton")}
           </a>
-          <a
-            href={game.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link-button github-button"
-          >
-            {t("game.codeButton")}
-          </a>
+          {game.githubUrl && (
+            <a
+              href={game.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-button github-button"
+            >
+              {t("game.codeButton")}
+            </a>
+          )}
         </div>
       </div>
     </div>
